@@ -1,0 +1,42 @@
+---
+// src/pages/index.astro
+import CRISPRSimulator from '../components/CRISPRSimulator';
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>CRISPR Gene Therapy Simulator</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #050505;
+        /* Prevent iOS Safari bounce/scroll in kiosk mode */
+        overscroll-behavior: none;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+      }
+      #root {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <!-- client:only forces React to render on the client (no SSR),
+           eliminating hydration mismatches and giving zero-wait interactivity -->
+      <CRISPRSimulator client:load />
+    </div>
+  </body>
+</html>
