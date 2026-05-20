@@ -444,15 +444,11 @@ export default function DossierContent() {
         {/* ── Team ── */}
         <section className="team-section">
           <div className="team-institution">
-            <div className="institution-seal w-12 h-12">
-              <img src="./bis.png" alt="utch" className="w-12 h-12" />
-
-            </div>
-            {/* <div className="institution-seal">
+            <div className="institution-seal">
               <div className="seal-ring">
                 <span className="seal-text">UTCH</span>
               </div>
-            </div> */}
+            </div>
             <div className="institution-info">
               <div className="mono-xs text-zinc-600" style={{ marginBottom: "0.5rem" }}>INSTITUCIÓN EMISORA</div>
               <div className="institution-name">Universidad Tecnológica de Chihuahua</div>
